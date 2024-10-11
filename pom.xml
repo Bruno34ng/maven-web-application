@@ -106,20 +106,22 @@
       </snapshotRepository>
       
   </distributionManagement>
-	
-	<build>
-		<finalName>tesla</finalName>
-		
-
-                       <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
+  
+  <build>
+    <finalName>tesla</finalName>
+    
+    <plugins> <!-- Add this opening tag -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+        </configuration>
+      </plugin>
+    </plugins> <!-- Add this closing tag -->
+  </build>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
